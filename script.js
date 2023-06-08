@@ -5,8 +5,14 @@ let listUl = document.getElementById('list');
 
 function todo() {
     let inp = document.getElementById('inp');
-    let value = inp.value.trim();
+    let value = inp.value.trim(); 
 
+    if(list.includes(inp.value)){
+        alert('Data repeated');
+        return;
+
+    }
+    
     if (value !== "") {
         list.push(value);
         Display();
@@ -14,6 +20,7 @@ function todo() {
     } else {
         alert("bos deyer gire bilmersiniz");
     }
+ 
 }
 
 function Delete(ind) {
